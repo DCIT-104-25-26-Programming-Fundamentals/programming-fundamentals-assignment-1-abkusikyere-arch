@@ -55,3 +55,22 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def print_multiplication_table(n):
+    if n <= 0:
+        print("Error: N must be a positive integer.")
+        return
+
+    print(f"Multiplication Table for {n}:")
+    for i in range(1, 13):
+        print(f"{n} x {i} = {n * i}")
+
+try:
+    n = int(input("Enter a number N: "))
+    if n <= 0:
+        print("Error: Please enter a positive integer.")
+    else:
+        for i in range(1, n + 1):
+            print_multiplication_table(i)
+            print("---------------------------")
+except ValueError:
+    print("Error: Please enter a valid integer.")
